@@ -1,0 +1,20 @@
+{
+  "base_model_name_or_path": "./esm/esm2_650M",
+  "bias": "none",
+  "fan_in_fan_out": false,
+  "inference_mode": true,
+  "init_lora_weights": true,
+  "lora_alpha": 24,
+  "lora_dropout": 0.6,
+  "modules_to_save": [
+    "decode_head"
+  ],
+  "peft_type": "LORA",
+  "r": 48,
+  "target_modules": [
+    "value",
+    "query",
+    "key"
+  ],
+  "task_type": "SEQ_CLS"
+}
