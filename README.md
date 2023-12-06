@@ -12,4 +12,4 @@ You can follow the pipeline both on CPU and GPU, the inclusion of the ```cudatoo
 
 ## Notebooks
 ### Property-based model
-We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [(extract LBDs)](./scripts/LBD_extraction_from_ALF.ipynb) from anti-lipopolysaccharide factor(ALF) for data augumentation.
+We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/LBD_extraction_from_ALF.ipynb) from anti-lipopolysaccharide factor(ALF) for data augumentation.
