@@ -28,3 +28,5 @@ We employ two distinct approaches to filter the pontential active maps. One is m
 [This jupyter notebook](./scripts/Genetic_Algorithms.ipynb) will help you to modificate AMPs with a genetic algorithm. We use property-based model as the fitness function to guide the production of the next generation. Active AMPs will be filtered through the contact-based model combined with two map filter approaches. The final step in the pipeline involved the calculation of BCELoss to determine the activity order. 
 
 ## Contact
+Zhiwei Qin(z.qin@bnu.edu.cn)\
+Qiandi Gao(gaoqiandi@mail.bnu.edu.cn)
