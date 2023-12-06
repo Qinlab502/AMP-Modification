@@ -4,7 +4,7 @@
 ![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/Fig.1.png)
 
 ## Model Installation
-The protein language model we used for training can be downloaded through this link [(link)](https://huggingface.co/facebook/esm2_t33_650M_UR50D/tree/main). Since the large parameters, we have not put this model file in the models directory.
+The protein language model we used for training can be downloaded through this link [(ESM2_t33_650M)](https://huggingface.co/facebook/esm2_t33_650M_UR50D/tree/main). Since the large parameters, we have not put this model file in the models directory.
 
 ## Environment Requirement
 All the environment dependency packages for pipeline running have been concluded in the 'environment.yml' file. You can download the file and created the environment via ```conda env create -f environment.yml```.
