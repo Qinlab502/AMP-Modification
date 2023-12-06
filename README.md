@@ -12,7 +12,7 @@ You can follow the pipeline both on CPU and GPU, the inclusion of the ```cudatoo
 
 ## Notebooks
 ### Property-based model
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/property-based_model_with_lora.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/property-based_model_with_lora.ipynb)  
 We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/LBD_extraction_from_ALF.ipynb) from anti-lipopolysaccharide factor(ALF) for data augumentation. [This jupyter notebook](./scripts/property-based_model_with_lora.ipynb) will show you how to establish a fine-tuned model by LoRA with limited data. You can easily use this pipeline for other few shot learning.
 
 ### Contact-based model
