@@ -20,4 +20,5 @@ We have fine-tuned a pretrained protein language model with LoRA for physicochem
 ### Contact map filter
 We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. You can follow the pipeline in [this jupyter notebook](./scripts/contact_map_filter.ipynb).
 
-## Genetic Algorithm
+### Genetic Algorithm
+[This jupyter notebook](./scripts/Genetic_Algorithms.ipynb) will help you to modificate AMPs with a genetic algorithm. We use property-based model as the fitness function to guide the production of the next generation. Active AMPs will be filtered through the contact-based model combined with two map filter approaches. The final step in the pipeline involved the calculation of BCELoss to determine the activity order. 
