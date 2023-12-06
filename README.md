@@ -11,7 +11,7 @@ All the environment dependency packages for pipeline running have been concluded
 You can follow the pipeline both on CPU and GPU, the inclusion of the ```cudatoolkit==11.1.1``` dependency is needed if you have a GPU. You can check the device by ```torch.cuda.is_available()```.
 
 ## Notebooks
-### Property-based model
+### Property-based model  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/scripts/property-based_model_with_lora.ipynb).
 We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/LBD_extraction_from_ALF.ipynb) from anti-lipopolysaccharide factor(ALF) for data augumentation. [This jupyter notebook](./scripts/property-based_model_with_lora.ipynb) will show you how to establish a fine-tuned model by LoRA with limited data. You can easily use this pipeline for other few shot learning.
 
 ### Contact-based model
