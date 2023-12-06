@@ -16,10 +16,15 @@ You can follow the pipeline both on CPU and GPU, the inclusion of the ```cudatoo
 We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/LBD_extraction_from_ALF.ipynb) from anti-lipopolysaccharide factor(ALF) for data augumentation. [This jupyter notebook](./scripts/property-based_model_with_lora.ipynb) will show you how to establish a fine-tuned model by LoRA with limited data. You can easily use this pipeline for other few shot learning.
 
 ### Contact-based model
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/contact-based_model.ipynb)  
 [This jupyter notebook](./scripts/contact-based_model.ipynb) will show you how to finetune a contact prediction head with only one pbd file.
 
 ### Contact map filter
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/contact_map_filter.ipynb)  
 We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. You can follow the pipeline in [this jupyter notebook](./scripts/contact_map_filter.ipynb).
 
 ### Genetic Algorithm
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/Genetic_Algorithms.ipynb)  
 [This jupyter notebook](./scripts/Genetic_Algorithms.ipynb) will help you to modificate AMPs with a genetic algorithm. We use property-based model as the fitness function to guide the production of the next generation. Active AMPs will be filtered through the contact-based model combined with two map filter approaches. The final step in the pipeline involved the calculation of BCELoss to determine the activity order. 
+
+## Contact
