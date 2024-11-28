@@ -10,7 +10,7 @@ Usage:
     python extract_LBD.py -i input_file_path -o output_file_path
 
 Example:
-    python extract_LBD.py -i ./database/ALF.fasta -o ./outputs/ALF_LBD.fasta
+    python extract_LBD.py -i ../database/ALF.fasta -o ../outputs/ALF_LBD.fasta
 """
 
 import argparse
