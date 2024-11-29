@@ -23,12 +23,21 @@ python property.py --model_path ../models/esm2_650M -i ../database/LBD_135.fasta
 There are also optional arguments available for model training hyperparameters and LoRA parameters. For more detailed information, you can refer to the `parse_arguments` function. To save the trained model, make sure to include the argument *--save_model*.
 
 ### Contact-based model
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/contact-based_model.ipynb)  
-[This jupyter notebook](./scripts/contact-based_model.ipynb) will show you how to finetune a contact prediction head with only one pbd file.
+In this section, we first trained a [contact prediction model](./scripts/contact.py) to predict the contact map of input sequences. A contact map is a two-dimensional representation of Cβ-Cβ distances between residue pairs, where a distance of less than 8 angstroms is considered a contact and assigned a value of 1. Following the procedure outlined by [Rao et al.](https://doi.org/10.1101/2020.12.15.422761), we trained the model and utilized a property-based approach to extract attention scores from each layer and head. After applying symmetrization, these scores were processed with average product correction and subsequently passed into a logistic regression model with a sigmoid activation function for training.
+#### Example
+```
+python contact.py -i ../database/lbdb.cif
+```
+- **-i:**    Path to the input training pdb file
 
-### Contact map filter
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/contact_map_filter.ipynb)  
-We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. You can follow the pipeline in [this jupyter notebook](./scripts/contact_map_filter.ipynb).
+Other parameters are available in [contact.py](./scripts/contact.py). If you want to save the trained model, you have to set the argument *--save_model* and and specify the output path using *-o* to indicate where the model should be saved, like 
+```
+python contact.py -i ../database/lbdb.cif --save_model -o './model/contact-based_model.pt'
+```
+
+Then We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. 
+![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/contact_map_filter.jpeg)
+The script [mapfilter.py](./scripts/mapfilter.py) defines two functions implementing the approaches described above.
 
 ### Genetic Algorithm
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/Genetic_Algorithms.ipynb)  
