@@ -62,6 +62,8 @@ optional arguments:
 ```
 **Tips:** The inference process will automatically detect whether a GPU is available on the device. If no available GPU is detected, it will default to using the CPU.
 
-## Contact
+## Citation and Contact
+### Citation
+### Contact
 Zhiwei Qin(z.qin@bnu.edu.cn)\
 Qiandi Gao(gaoqiandi@mail.bnu.edu.cn)
