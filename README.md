@@ -12,7 +12,13 @@ You can follow the pipeline both on CPU and GPU, the inclusion of the ```cudatoo
 
 ## Training
 ### Property-based model
-We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/extract_LBD.py) from anti-lipopolysaccharide factor(ALF) for data augumentation. [Property.py](./scripts/property.py) will show you how to establish a fine-tuned model by LoRA with limited data. You can easily use this pipeline for other few shot learning.
+We have fine-tuned a pretrained protein language model with LoRA for physicochemical property classification. To begin with, we [extract LBDs](./scripts/extract_LBD.py) from anti-lipopolysaccharide factor(ALF) for data augumentation. [property.py](./scripts/property.py) will show you how to establish a fine-tuned model by LoRA with limited data. You can easily use this pipeline for other few shot learning.
+#### Example
+`python property.py --model_path ../models/esm2_650M -i ../database/LBD_135.fasta`
+- **--model_path:**    path to the pretrained ESM2 model
+- **-i:**    Path to the training fasta file
+
+There are also optional arguments available for model training hyperparameters and LoRA parameters. For more detailed information, you can refer to the `parse_arguments` function. To save the trained model, make sure to include the argument *--save_model*.
 
 ### Contact-based model
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/contact-based_model.ipynb)  
