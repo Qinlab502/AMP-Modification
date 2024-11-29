@@ -16,3 +16,4 @@ dependencies:
       - plotly==5.15.0
       - focal_loss_torch==0.1.2
       - tqdm==4.62.3
+      - biotite==0.37.0
