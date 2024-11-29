@@ -35,15 +35,32 @@ Other parameters are available in [contact.py](./scripts/contact.py). If you wan
 python contact.py -i ../database/lbdb.cif --save_model -o './model/contact-based_model.pt'
 ```
 
-Then We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. 
+Then we employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. 
 
-![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/contact_map_filter.jpeg)
+![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/contact_map_filter.png)
 
 The script [mapfilter.py](./scripts/mapfilter.py) defines two functions implementing the approaches described above.
 
-### Genetic Algorithm
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Qinlab502/AMP-modification/blob/main/scripts/Genetic_Algorithms.ipynb)  
-[This jupyter notebook](./scripts/Genetic_Algorithms.ipynb) will help you to modificate AMPs with a genetic algorithm. We use property-based model as the fitness function to guide the production of the next generation. Active AMPs will be filtered through the contact-based model combined with two map filter approaches. The final step in the pipeline involved the calculation of BCELoss to determine the activity order. 
+## Design
+[design.py](./scripts/design.py) will help you to modificate AMPs with a genetic algorithm. We use property-based model as the fitness function to guide the production of the next generation. Active AMPs will be filtered through the contact-based model combined with two map filter approaches. The final step in the pipeline involved the calculation of BCELoss to determine the activity order. 
+
+```
+usage: design.py [-h] -i FASTA_FILE -o MUTATION_FASTA_OUTPUT [--num_parents_mating NUM_PARENTS_MATING] [--num_generations NUM_GENERATIONS] [--num_mutations NUM_MUTATIONS]
+
+optional arguments:
+  -h, --help                             Show this help message and exit
+  -i, -fasta_file
+                                         Path to the input fasta file.
+  -o, --mutation_fasta_output
+                                         Path to save the mutation fasta file.
+  --num_parents_mating
+                                         Number of parents mating (default=8).
+  --num_generations
+                                         Number of rounds to generate iteratively (default=10000).
+  --num_mutations
+                                         Number of mutation sites (default=3)
+```
+**Tips:** The inference process will automatically detect whether a GPU is available on the device. If no available GPU is detected, it will default to using the CPU.
 
 ## Contact
 Zhiwei Qin(z.qin@bnu.edu.cn)\
