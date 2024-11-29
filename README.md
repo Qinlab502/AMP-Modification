@@ -35,7 +35,7 @@ Other parameters are available in [contact.py](./scripts/contact.py). If you wan
 python contact.py -i ../database/lbdb.cif --save_model -o './model/contact-based_model.pt'
 ```
 
-Then we employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. 
+Then we employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. Positive maps will be filterer out by calculating their similarity to the LBDB map using Binary Cross Entropy Loss (BCELoss).
 
 ![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/contact_map_filter.png)
 
