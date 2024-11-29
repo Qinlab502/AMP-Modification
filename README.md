@@ -36,7 +36,9 @@ python contact.py -i ../database/lbdb.cif --save_model -o './model/contact-based
 ```
 
 Then We employ two distinct approaches to filter the pontential active maps. One is maps intersection to filter active sites and the other is maps flattening for linear projection. 
+
 ![image](https://github.com/Qinlab502/AMP-Modification/blob/main/images/contact_map_filter.jpeg)
+
 The script [mapfilter.py](./scripts/mapfilter.py) defines two functions implementing the approaches described above.
 
 ### Genetic Algorithm
