@@ -30,7 +30,7 @@ python contact.py -i ../database/lbdb.cif
 ```
 - **-i:**    Path to the input training pdb file
 
-Other parameters are available in [contact.py](./scripts/contact.py). If you want to save the trained model, you have to set the argument *--save_model* and and specify the output path using *-o* to indicate where the model should be saved, like 
+Other parameters are available in [contact.py](./scripts/contact.py). If you want to save the trained model, you have to set the argument *--save_model* and specify the output path using *-o* to indicate where the model should be saved, like 
 ```
 python contact.py -i ../database/lbdb.cif --save_model -o './model/contact-based_model.pt'
 ```
