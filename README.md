@@ -64,14 +64,15 @@ optional arguments:
 
 ## Citation and Contact
 ### Citation
-@article{gao2025explainable,  
-  title={An explainable few-shot learning model for the directed evolution of antimicrobial peptides},  
-  author={Gao, Qiandi and Ge, Liangjun and Wang, Yihan and Zhu, Yanran and Liu, Yu and Zhang, Heqian and Huang, Jiaquan and Qin, Zhiwei},  
-  journal={International Journal of Biological Macromolecules},  
-  volume={285},  
-  pages={138272},  
-  year={2025},  
-  publisher={Elsevier}  
-}  
+```bibtex
+@article{gao2025explainable,
+  title={An explainable few-shot learning model for the directed evolution of antimicrobial peptides},
+  author={Gao, Qiandi and Ge, Liangjun and Wang, Yihan and Zhu, Yanran and Liu, Yu and Zhang, Heqian and Huang, Jiaquan and Qin, Zhiwei},
+  journal={International Journal of Biological Macromolecules},
+  volume={285},
+  pages={138272},
+  year={2025},
+  publisher={Elsevier}
+}
 ### Contact
 Zhiwei Qin(z.qin@bnu.edu.cn)
